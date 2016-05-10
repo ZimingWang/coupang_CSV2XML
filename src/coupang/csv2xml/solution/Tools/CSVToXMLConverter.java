@@ -46,7 +46,7 @@ public class CSVToXMLConverter {
 
     }
 
-	public int convertFile(String csvFileName, String xmlFileName, String delimiter) {
+	public boolean convertFile(String csvFileName, String xmlFileName, String delimiter) {
 
 		int rowsCount = -1;
 		BufferedReader csvReader;
@@ -59,7 +59,7 @@ public class CSVToXMLConverter {
 			csvReader = new BufferedReader(new FileReader(csvFileName));
 
 			// ** Now using the OpenCSV **//
-			CSVReader reader = new CSVReader(new FileReader("test1.csv"), delimiter.charAt(0));
+			CSVReader reader = new CSVReader(new FileReader(csvFileName), delimiter.charAt(0));
 			// CSVReader reader = new CSVReader(csvReader);
 			String[] nextLine;
 			int line = 0;
@@ -87,7 +87,7 @@ public class CSVToXMLConverter {
 				}
 				line++;
 			}
-			// ** End of CSV parsing**//
+
 
 			FileWriter writer = null;
 
@@ -115,16 +115,14 @@ public class CSVToXMLConverter {
 				}
 			}
 
-			// Output to console for testing
-			// Resultt result = new StreamResult(System.out);
-
 		} catch (IOException exp) {
 			System.err.println(exp.toString());
 		} catch (Exception exp) {
 			System.err.println(exp.toString());
 		}
-		return rowsCount;
-		// "XLM Document has been created" + rowsCount;
+		System.out.println(xmlFileName +"\thas been created from\t"+ csvFileName);
+		return true;
+		
 	}
 	
 	
