@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<XMLCreators>
+    <row>
+        <Name>chi</Name>
+        <Age>23</Age>
+        <Sex/>
+    </row>
+    <row>
+        <Name>kay</Name>
+        <Age>19</Age>
+        <Sex>male</Sex>
+    </row>
+    <row>
+        <Name>John</Name>
+        <Age/>
+        <Sex>male</Sex>
+    </row>
+</XMLCreators>
