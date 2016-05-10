@@ -1,0 +1,45 @@
+0.
+
+0.1 This is a simple example to convert the CSV file into xml format.
+Basically this is referenced from the example provided by the stackoverflow.
+http://stackoverflow.com/questions/12120055/conversion-of-csv-to-xml-with-java
+
+0.2 There are two implemented method and the first is just read and parse without imported other
+tools. And the second way applied csvreader from opencsv.
+
+0.3 The first implemented way is just show result in the console and would not be written into 
+the xml file.
+
+
+
+0.4To see the result, please read the files in csv and xml folder of the testSource folder. 
+To test the reuslt cases, please execute the java files in the TestExample package
+
+
+
+1.we assume that all the csv files  used unified delimeter, but the delimeter could be optional
+The test cases is coming from the 	https://github.com/dralagen/csv2xml
+	
+
+2. when the csv may be large, then it would be better to pre-process of it to split it into smaller
+part, or apply map-reduce method to parse separate part.Also the resource xml file should also 
+be considered, for example, if read and parse xml file involved,then the SAX is more suitable
+than DOM to be applied.
+
+
+	
+3.If these should be put into reality use as products
+then 
+3.1 it may needed to be put as much functions as possible, not only the csv to xml,
+but the xml to csv, and other format like pure text and json should also be considered.
+
+3.2 we should customized the feature of resource file and result file to make it common used.
+
+3.3 publish it in the webservice and provide the api or put it into app.
+
+3.4 team work needed, then managable tools and continues integeration tools should be imported.
+
+
+
+
+	
